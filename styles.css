@@ -1,19 +1,47 @@
+body {
+  font-family: "Nikeflix", sans-serif;
+  font-style: italic;
+}
+button {
+  background-color: #f9f9f9;
+  border: 0;
+  color: #000000;
+}
+.logo {
+  width: 70px;
+  margin-left: 20px;
+  padding: 0;
+}
+.carrito {
+  align-items: end;
+  width: 35px;
+  height: 35px;
+  stroke: #000;
+}
 .Titulo {
+  font-family: "Nikeflix", sans-serif;
+  font-style: italic;
+  size: 200px;
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 .Subtitulo {
   text-align: center;
+  font-family: "Nikeflix", sans-serif;
+  font-style: italic;
 }
 /* Estilos para las tarjetas de producto */
+
 .tarjeta-producto {
   border: 2px solid #000000;
   padding: 10px;
-  margin: 10px;
+  margin: 23px;
   text-align: center;
+  align-items: center;
   width: 250px;
   display: inline-block;
   vertical-align: top;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
@@ -47,7 +75,7 @@
 .tarjeta-producto button {
   background-color: #000;
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 8px 15px;
   border-radius: 18px;
   cursor: pointer;
@@ -56,12 +84,6 @@
 
 .tarjeta-producto button:hover {
   background-color: #343333;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 .container-fluid {

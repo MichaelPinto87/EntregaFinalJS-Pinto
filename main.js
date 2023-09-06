@@ -122,7 +122,17 @@ const generarTarjetas = (productos) => {
       const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
       carrito.push(producto);
       localStorage.setItem("carrito", JSON.stringify(carrito));
-      alert("Producto agregado al carrito.");
+      Toastify({
+        text: "Producto agregado al carrito!",
+        offset: {
+          x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+          y: 0, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
     });
 
     tarjeta.appendChild(nombre);
@@ -140,3 +150,5 @@ const generarTarjetas = (productos) => {
 };
 
 generarTarjetas(productos);
+
+Swal.fire("Santi puto");
