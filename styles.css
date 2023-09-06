@@ -2,6 +2,9 @@ body {
   font-family: "Nikeflix", sans-serif;
   font-style: italic;
 }
+navbar navbar-expand-lg navbar-light bg-light {
+  margin: 0px;
+}
 button {
   background-color: #f9f9f9;
   border: 0;
