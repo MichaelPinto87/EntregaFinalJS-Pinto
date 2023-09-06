@@ -89,6 +89,24 @@ const productos = [
     imagen: "img/Remera3.png",
     descripcion: "Remera manga larga Nike.",
   },
+  {
+    id: 11,
+    producto: "Remera Nike Jordan Gris",
+    categoria: "Remera",
+    precio: 69.99,
+    marca: "Nike Jordan",
+    imagen: "img/Remera2.png",
+    descripcion: "Remera Nike Jordan.",
+  },
+  {
+    id: 12,
+    producto: "Remera Larga Nike Negra",
+    categoria: "Remera",
+    precio: 69.99,
+    marca: "Nike",
+    imagen: "img/Remera3.png",
+    descripcion: "Remera manga larga Nike.",
+  },
 ];
 const generarTarjetas = (productos) => {
   const contenedor = document.getElementById("productos-container");
@@ -150,5 +168,27 @@ const generarTarjetas = (productos) => {
 };
 
 generarTarjetas(productos);
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
 
 Swal.fire("Santi puto");

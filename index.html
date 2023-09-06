@@ -7,6 +7,10 @@
     <link rel="icon" sizes="1x1 3x3 4x4" type="image/png" href="img/logonike.jpeg" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
   </head>
   <body>
     
@@ -25,6 +29,21 @@
             />
           </svg>
         </div>
+        <div class="nav-item" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <div class="nav-item" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <div class="nav-item" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
         <button>
       <div class="carrito">
         <svg
@@ -43,11 +62,53 @@
         </svg>
       </div></button>
     </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide" style="background-image:url(img/carrusel3.jpg);
+              background-size: 320px;" >
+               </div>
+              <div class="swiper-slide" style="background-image:url(img/carrusel2.jpg);
+              background-size: 730px;"></div>
+              <div class="swiper-slide" style="background-image:url(img/carrusel1.jpg);
+              background-size: 285px;"></div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slider main container -->
+
     
     <h1 class="Titulo">N i k e</h1>
     <h2 class="Subtitulo">Vendedores numero1 en productos de vestimenta</h2>
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col-12">
+      <p class="h1 pb-3 pt-3">Productos Recomendados</p>
+      <div id="productos-container"></div>
+    </div>
+  </div>
+</div>
+   
+    
 
-    <div class="" id="productos-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"

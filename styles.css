@@ -2,9 +2,7 @@ body {
   font-family: "Nikeflix", sans-serif;
   font-style: italic;
 }
-navbar navbar-expand-lg navbar-light bg-light {
-  margin: 0px;
-}
+
 button {
   background-color: #f9f9f9;
   border: 0;
@@ -91,4 +89,21 @@ button {
 
 .container-fluid {
   padding: 0;
+}
+
+.swiper {
+  height: 430px;
+  .swiper-slide {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+  }
+}
+@media (max-width: 1014px) {
+  .swiper {
+    width: auto;
+  }
+  /* … */
 }
