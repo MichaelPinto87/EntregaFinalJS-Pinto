@@ -71,42 +71,6 @@ const productos = [
     imagen: "img/Remera1.png",
     descripcion: "Remera Nike Air Jordan.",
   },
-  {
-    id: 9,
-    producto: "Remera Nike Jordan Gris",
-    categoria: "Remera",
-    precio: 69.99,
-    marca: "Nike Jordan",
-    imagen: "img/Remera2.png",
-    descripcion: "Remera Nike Jordan.",
-  },
-  {
-    id: 10,
-    producto: "Remera Larga Nike Negra",
-    categoria: "Remera",
-    precio: 69.99,
-    marca: "Nike",
-    imagen: "img/Remera3.png",
-    descripcion: "Remera manga larga Nike.",
-  },
-  {
-    id: 11,
-    producto: "Remera Nike Jordan Gris",
-    categoria: "Remera",
-    precio: 69.99,
-    marca: "Nike Jordan",
-    imagen: "img/Remera2.png",
-    descripcion: "Remera Nike Jordan.",
-  },
-  {
-    id: 12,
-    producto: "Remera Larga Nike Negra",
-    categoria: "Remera",
-    precio: 69.99,
-    marca: "Nike",
-    imagen: "img/Remera3.png",
-    descripcion: "Remera manga larga Nike.",
-  },
 ];
 const generarTarjetas = (productos) => {
   const contenedor = document.getElementById("productos-container");
@@ -119,14 +83,11 @@ const generarTarjetas = (productos) => {
     nombre.textContent = producto.producto;
 
     const precio = document.createElement("p");
-    precio.textContent = `Precio: $${producto.precio}`;
+    precio.textContent = ` $${producto.precio}`;
 
     const descripcion = document.createElement("p");
-    descripcion.textContent =
-      producto.descripcion || "Descripción no disponible";
 
     const botonAgregar = document.createElement("button");
-    botonAgregar.textContent = "Agregar al Carrito";
 
     const imagen = document.createElement("img");
     if (producto.imagen) {
@@ -142,6 +103,7 @@ const generarTarjetas = (productos) => {
       localStorage.setItem("carrito", JSON.stringify(carrito));
       Toastify({
         text: "Producto agregado al carrito!",
+        duration: 1500,
         offset: {
           x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
           y: 0, // vertical axis - can be a number or a string indicating unity. eg: '2em'
@@ -157,7 +119,6 @@ const generarTarjetas = (productos) => {
     tarjeta.appendChild(precio);
     tarjeta.appendChild(descripcion);
     tarjeta.appendChild(imagen);
-    tarjeta.appendChild(botonAgregar);
 
     acumulador.appendChild(tarjeta);
     return acumulador;
@@ -192,3 +153,36 @@ const swiper = new Swiper(".swiper", {
 });
 
 Swal.fire("Santi puto");
+
+// Función para cambiar el modo
+function toggleDarkMode() {
+  const body = document.body;
+  const navbar = document.querySelector(".navbar");
+  const cards = document.querySelectorAll(".card");
+
+  // Cambia la clase del cuerpo para activar/desactivar el modo oscuro
+  body.classList.toggle("dark-mode");
+  navbar.classList.toggle("dark-mode");
+
+  // Cambia la clase de las tarjetas (si tienes más elementos para cambiar)
+  cards.forEach((card) => {
+    card.classList.toggle("dark-mode");
+  });
+
+  // Guarda el estado actual del modo en localStorage
+  const isDarkMode = body.classList.contains("dark-mode");
+  localStorage.setItem("dark-mode", isDarkMode);
+}
+
+// Verifica si el modo oscuro está activado en localStorage y aplícalo
+const storedDarkMode = localStorage.getItem("dark-mode");
+if (storedDarkMode === "true") {
+  toggleDarkMode();
+}
+
+// Agrega un event listener al botón para alternar el modo oscuro
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+if (darkModeToggle) {
+  darkModeToggle.addEventListener("click", toggleDarkMode);
+}
+const divisa = "$";

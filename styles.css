@@ -1,6 +1,6 @@
 body {
   font-family: "Nikeflix", sans-serif;
-  font-style: italic;
+  font-style: sans-serif;
 }
 
 button {
@@ -13,7 +13,8 @@ button {
   margin-left: 20px;
   padding: 0;
 }
-.carrito {
+
+.cart {
   align-items: end;
   width: 35px;
   height: 35px;
@@ -22,9 +23,8 @@ button {
 .Titulo {
   font-family: "Nikeflix", sans-serif;
   font-style: italic;
-  size: 200px;
+  font-size: 80px;
   text-align: center;
-  color: rgb(0, 0, 0);
 }
 .Subtitulo {
   text-align: center;
@@ -33,8 +33,9 @@ button {
 }
 /* Estilos para las tarjetas de producto */
 
+/* Estilos para las tarjetas de producto */
 .tarjeta-producto {
-  border: 2px solid #000000;
+  border: 0.1px solid #000000;
   padding: 10px;
   margin: 23px;
   text-align: center;
@@ -42,8 +43,19 @@ button {
   width: 250px;
   display: inline-block;
   vertical-align: top;
-  border-radius: 30px;
+  border-radius: 20px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Agregamos una transición suave para el efecto */
+}
+
+/* Estilos para las tarjetas de producto al pasar el cursor */
+.tarjeta-producto:hover {
+  transform: translateY(-20px); /* Mueve la tarjeta hacia arriba */
+}
+
+/* Estilos para la tarjeta siguiente al pasar el cursor sobre una tarjeta */
+.tarjeta-producto:hover + .tarjeta-producto {
+  transform: translateY(0px); /* Mueve la tarjeta siguiente hacia abajo */
 }
 
 .tarjeta-producto h2 {
@@ -106,4 +118,54 @@ button {
     width: auto;
   }
   /* … */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.card.dark-mode {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #ffffff;
+}
+
+/* Agrega estilos específicos de modo oscuro para otros elementos según sea necesario */
+
+/* Estilos para el botón de Modo Oscuro */
+#dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000000;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Estilos específicos para el modo oscuro */
+.dark-mode #dark-mode-toggle {
+  background-color: #333;
+  border-color: #333;
+  color: #ffffff;
+}
+
+.dark-mode #dark-mode-toggle:hover {
+  background-color: #ffffff;
+  color: #333;
 }
