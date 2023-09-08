@@ -8,6 +8,17 @@ button {
   border: 0;
   color: #000000;
 }
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .logo {
   width: 70px;
   margin-left: 20px;
@@ -31,7 +42,6 @@ button {
   font-family: "Nikeflix", sans-serif;
   font-style: italic;
 }
-/* Estilos para las tarjetas de producto */
 
 /* Estilos para las tarjetas de producto */
 .tarjeta-producto {
@@ -45,17 +55,15 @@ button {
   vertical-align: top;
   border-radius: 20px;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Agregamos una transición suave para el efecto */
+  transition: transform 0.3s ease;
 }
 
-/* Estilos para las tarjetas de producto al pasar el cursor */
 .tarjeta-producto:hover {
-  transform: translateY(-20px); /* Mueve la tarjeta hacia arriba */
+  transform: translateY(-20px);
 }
 
-/* Estilos para la tarjeta siguiente al pasar el cursor sobre una tarjeta */
 .tarjeta-producto:hover + .tarjeta-producto {
-  transform: translateY(0px); /* Mueve la tarjeta siguiente hacia abajo */
+  transform: translateY(0px);
 }
 
 .tarjeta-producto h2 {
@@ -78,8 +86,12 @@ button {
   margin-bottom: 20px;
 }
 
-/*contenedor de productos */
 #productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#productos-carrito {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -137,9 +149,6 @@ body.dark-mode {
   color: #ffffff;
 }
 
-/* Agrega estilos específicos de modo oscuro para otros elementos según sea necesario */
-
-/* Estilos para el botón de Modo Oscuro */
 #dark-mode-toggle {
   background-color: transparent;
   border: none;
@@ -158,7 +167,6 @@ body.dark-mode {
   color: #333;
 }
 
-/* Estilos específicos para el modo oscuro */
 .dark-mode #dark-mode-toggle {
   background-color: #333;
   border-color: #333;
@@ -168,4 +176,40 @@ body.dark-mode {
 .dark-mode #dark-mode-toggle:hover {
   background-color: #ffffff;
   color: #333;
+}
+
+.contact-form {
+  max-width: 430px;
+  margin: 5px auto;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 12px 10px 20px 10px rgba(0, 0, 0, 0.356);
+}
+
+form {
+  text-align: left;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#contactForm label,
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#contactForm button {
+  background-color: #646464;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
